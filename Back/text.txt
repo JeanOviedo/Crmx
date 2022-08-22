@@ -1,0 +1,134 @@
+mutation AutenticarUsuario ($input: AutenticarInput) {
+  autenticarUsuario (input: $input)
+  {
+    token
+  }
+}
+
+
+{
+"input" : {
+"email": "jajaj@sssae.com",
+"password": "www"
+  },
+ 
+}
+
+
+
+mutation nuevoProducto($input: ProductoInput) {
+  nuevoProducto(input: $input)
+  {
+    id
+    nombre
+    existencia
+    precio
+    creado
+}
+}
+
+
+{
+"input" : {
+"nombre": "Pc Mesa 12",
+"existencia": 5,
+"precio": 1000
+  },
+  }
+
+
+   mutation actualizarProducto($id: ID!, $input: ProductoInput) {
+    actualizarProducto(id: $id, input: $input) {
+      id
+      nombre
+      existencia
+      precio
+    }
+  }
+
+  {
+  "id": "62ed49a85c69e91484b11153",
+  "input" : {
+    "nombre": "ssss Jugo",
+    "precio": 11111112,
+    "existencia":111
+ 
+}
+}
+
+
+
+ mutation eliminarProducto($id: ID!) {
+    eliminarProducto(id: $id)
+  }
+
+
+{
+  "id": "62ed49a85c69e91484b11153",
+ 
+}
+
+
+
+
+
+mutation nuevoCliente($input: ClienteInput) {
+  nuevoCliente(input: $input) {
+    nombre
+    apellido
+    
+  }
+}
+
+{
+  "input": {
+    "nombre": "Juan",
+    "apellido": "Perez",
+    "email": "jsjs@ss.com",
+    "telefono": "2222222"
+  }
+}
+
+
+authorization
+{
+  "data": {
+    "autenticarUsuario": {
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZGVhYjg2ODFmNmI5N2Y4MTE0ZDRjNyIsImVtYWlsIjoiamFqYWpAc3NzYWUuY29tIiwibm9tYnJlIjoiUGVwZWUiLCJhcGVsbGlkbyI6IkxvcGV6IiwiaWF0IjoxNjYwODQ3MTI1LCJleHAiOjE2NjA4NzU5MjV9.mGhnCz7K2hDrMhLU1EXzZCD0iC2SsY1jwZcJeCJD-pE"
+    }
+  }
+}
+
+
+
+
+query ObtenerClientes {
+  obtenerClientes {
+    nombre
+    apellido
+  }
+}
+
+
+
+ mutation actualizarCliente($id: ID!, $input: ClienteInput) {
+    actualizarCliente(id: $id, input: $input) {
+      
+      nombre
+      email
+      
+    }
+  }
+
+
+
+{
+  "id": "62fe859b57683b17a8cbe9bf",
+  "input": {
+  "nombre": "CAZEMIRO",
+  "apellido": "LOPEZ",
+  "email": "Nuevo@dd.com",
+  "empresa": "empressa",
+  "telefono":"3333"
+  }
+}
