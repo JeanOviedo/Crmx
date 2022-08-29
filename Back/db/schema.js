@@ -35,7 +35,7 @@ const typeDefs = gql`
     cantidad: Int
   }
 
-  type TopCliente {
+  type TopClientes {
     total: Float
     cliente: [Cliente]
   }
@@ -123,6 +123,7 @@ const typeDefs = gql`
     mejoresVendedores: [TopVendedor]
     buscarProducto(texto: String!): [Producto]
   }
+
   type Mutation {
     # Usuario
     nuevoUsuario(input: UsuarioInput): Usuario
